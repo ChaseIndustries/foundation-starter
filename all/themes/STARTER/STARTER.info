@@ -34,8 +34,7 @@ stylesheets[all][] = css/theme.css
 stylesheets[all][] = css/foundation.min.css
 
 
-; Modernizr acts as a shim for HTML5 elements for older browsers
-; as well as detection for mobile devices.
+; plugins that are useful on all projects
 
 scripts[] = js/vendor/plugins/fastclick.js
 scripts[] = js/vendor/plugins/jquery.cookie.js
