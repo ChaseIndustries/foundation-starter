@@ -144,16 +144,16 @@ $default-float: left;
 
 // Media Queries
 
-// $small-screen: 768px;
-// $medium-screen: 1280px;
-// $large-screen: 1440px;
+ $small-screen: 768px;
+ $medium-screen: 1280px;
+ $large-screen: 1440px;
 
-// $screen: "only screen";
-// $small: "only screen and (min-width: #{$small-screen})";
-// $medium: "only screen and (min-width: #{$medium-screen})";
-// $large: "only screen and (min-width: #{$large-screen})";
-// $landscape: "only screen and (orientation: landscape)";
-// $portrait: "only screen and (orientation: portrait)";
+ $screen: "only screen";
+ $small: "only screen and (min-width: #{$small-screen})";
+ $medium: "only screen and (min-width: #{$medium-screen})";
+ $large: "only screen and (min-width: #{$large-screen})";
+ $landscape: "only screen and (orientation: landscape)";
+ $portrait: "only screen and (orientation: portrait)";
 
 //// Cursors
 
@@ -178,8 +178,8 @@ $default-float: left;
 
 // We use this to control the maximum number of block grid elements per row
 
-// $block-grid-elements: 12;
-// $block-grid-default-spacing: em-calc(20);
+ $block-grid-elements: 12;
+ $block-grid-default-spacing: em-calc(20);
 
 // Enables media queries for block-grid classes. Set to false if writing semantic HTML.
 
