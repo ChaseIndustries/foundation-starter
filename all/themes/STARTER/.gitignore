@@ -18,9 +18,10 @@ sass-cache/
 .DS_Store
 
 # Multisite symlinks
-adam.*
 bi-stage.*
 
 # Settings files
 */settings*.php
+*.codekit
+gruntfile.js
 
