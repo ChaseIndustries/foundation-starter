@@ -1,19 +1,5 @@
 @charset 'UTF-8';
 
-// Base
-//
-// Init file contains required imports. Here's where we include normalize,
-// foundation and also compass.
-@import "base/init";
-// Import our mixins early so they can be used by other partials.
-@import "base/mixins";
-//
-// Fix for some Drupal CSS quirks (Drupalisms).
-@import "base/drupal";
-
-//foundation icons
-@import "foundation-icons";
-
 // These are defined in '_foundation-variables.scss'
 // but its easier to manage them here. When I find other useful settings
 // I plan on also moving those into this file
@@ -38,6 +24,21 @@ $radius: 5px;
 $footer-height:180px;
 $header-height:180px;
 
+// Foundation imports
+
+// Base
+//
+// Init file contains required imports. Here's where we include normalize,
+// foundation and also compass.
+@import "base/init";
+// Import our mixins early so they can be used by other partials.
+@import "base/mixins";
+//
+// Fix for some Drupal CSS quirks (Drupalisms).
+@import "base/drupal";
+
+//foundation icons
+@import "foundation-icons";
 
 // Custom Theme Imports
 @import 'component';
