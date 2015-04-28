@@ -11,15 +11,15 @@
 // Classes we commonly point producers to that are named differently
 // between bootstrap and foundation
 .pull-right {
-  float:right !important;
+  @extend .right;
 }
 
 .pull-left {
-  float:left !important;
+  @extend .left;
 }
 
 .hidden {
-  visibility: hidden !important;
+ @extend .hide;
 }
 
 img.pull-right {

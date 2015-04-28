@@ -1,6 +1,19 @@
+// @file
+// Place your mixins here. Feel free to roll your own mixins. Or nuke what is
+// currently here.
+
 //
-//  SASS MIXINS (Helpers)
+// Mixin: Base Utility
 //
+@mixin stage {
+  position: absolute;
+  left: -999em;
+}
+
+@mixin unstage {
+  position: static;
+  left: auto;
+}
  
 //padding helpers
 @mixin padding-top-bottom($amount : $spacing){

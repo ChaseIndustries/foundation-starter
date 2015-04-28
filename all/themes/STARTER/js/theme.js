@@ -1,4 +1,24 @@
 (function ($) {
+  
+  // set the default foundation breakpoints and variables
+  var breakpoints = {
+    sm : 640,
+    md : 1025,
+    lg : 1441,
+    xl : 1921
+  },
+  winWidth,
+  winHeight,
+  docWidth,
+  docHeight;
+  
+  function setVars(){ 
+    docHeight = $(document).outerHeight(),
+    docWidth  = $(document).outerWidth(),
+    winHeight = $(window).height(),
+    winWidth  = $(window).width();
+  }
+
   /**
    * Swap out svg files for PNGs on unsupporting devices. Modrnizr determines
    * what an unsupporting device is by adding the .no-svg class to the html
@@ -59,6 +79,8 @@
       // Get your Yeti started.
     }
   };
+  
+  
 
 }(jQuery));
 

@@ -32,10 +32,22 @@ $success-color: #43AC6A;
 $warning-color: #f08a24;
 $info-color: #a0d3e8;
 
+// Base
+//
+// Init file contains required imports. Here's where we include normalize,
+// foundation and also compass.
+@import "base/init";
+// Import our mixins early so they can be used by other partials.
+@import "base/mixins";
+//
+// Fix for some Drupal CSS quirks (Drupalisms).
+@import "base/drupal";
+
+//foundation icons
+@import "foundation-icons";
+
 
 // Custom Theme Imports
-@import 'mixins';
-@import 'base';
 @import 'component';
 @import 'layout';
 @import 'modifiers';
