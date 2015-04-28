@@ -1,0 +1,41 @@
+@charset 'UTF-8';
+
+@import "compass";
+@import "compass/css3";
+
+// Font size
+$font-base: percentage(10 / 16);  // 1rem = 10px
+
+// Font stacks
+$serif: "Times",serif;
+$sans-serif: "Helvetica",sans-serif;
+
+//Bootstrap Breakpoints
+$break-xs: 768px;
+$break-sm: 992px;
+$break-md: 1200px;
+
+// Other Arbitrary Values
+$spacing: 15px;
+$radius: 5px;
+$footer-height:180px;
+$header-height:180px;
+
+
+// These are defined in 'foundation/components/_settings.scss'
+// but its easier to manage them here. When I find other useful settings
+// I plan on also moving those into this file
+$primary-color: #008CBA;
+$secondary-color: #e7e7e7;
+$alert-color: #f04124;
+$success-color: #43AC6A;
+$warning-color: #f08a24;
+$info-color: #a0d3e8;
+
+
+// Custom Theme Imports
+@import 'mixins';
+@import 'base';
+@import 'component';
+@import 'layout';
+@import 'modifiers';

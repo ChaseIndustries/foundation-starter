@@ -1,0 +1,136 @@
+/**
+ * @file base.scss
+ *   Defaults. They are almost exclusively single element selectors but it
+ *   could include attribute selectors, pseudo-class selectors, helper classes,
+ *   child selectors or sibling selectors. Essentially, a base style says that
+ *   wherever this element is on the page, it should look like this.
+ */
+html,
+body {
+  height: 100%; }
+
+body {
+  font-size: 62.5%; }
+
+h1,
+.h1 {
+  font-size: 3.6rem; }
+
+h2,
+.h2 {
+  font-size: 3.2rem; }
+
+h3,
+.h3 {
+  font-size: 3rem; }
+
+h4,
+.h4 {
+  font-size: 2.4rem; }
+
+h5,
+.h5 {
+  font-size: 2rem; }
+
+h6,
+.h6 {
+  font-size: 1.8rem; }
+
+/**
+ * @file component.scss
+ *   The reusable, modular parts of the design. They are the callouts, the
+ *   sidebar sections, the product lists and so on.
+ */
+/**
+ * @file layout.scss
+ *   Divides the page into sections. Layouts hold one or more modules together.
+ */
+/**
+ * @file modifiers.scss
+ * Allows (utility) classes to be applied on the fly to elements to keep css clutter down and reduce
+ * class duplicates.
+ *
+ * These are classes that perform very basic functions for
+ * elements on the site, such as a background color or adding
+ * a simple border
+ */
+.pull-right {
+  float: right !important; }
+
+.pull-left {
+  float: left !important; }
+
+.hidden {
+  visibility: hidden !important; }
+
+img.pull-right {
+  margin-left: 1em;
+  margin-bottom: 1em; }
+
+img.pull-left {
+  margin-right: 1em;
+  margin-bottom: 1em; }
+
+.bigger {
+  font-size: 1.2em; }
+
+.smaller {
+  font-size: .8em; }
+
+.highlight-1 {
+  color: #008CBA; }
+
+.bgc-highlight-1 {
+  background: #008CBA; }
+
+.highlight-2 {
+  color: #e7e7e7; }
+
+.bgc-highlight-2 {
+  background: #e7e7e7; }
+
+.no-margin-top {
+  margin-top: 0 !important; }
+
+.no-margin-bottom {
+  margin-bottom: 0 !important; }
+
+.no-margin-left {
+  margin-left: 0 !important; }
+
+.no-margin-right {
+  margin-right: 0 !important; }
+
+.margin-left {
+  margin-left: 15px; }
+
+.margin-right {
+  margin-right: 15px; }
+
+.margin-top {
+  margin-top: 15px; }
+
+.margin-bottom {
+  margin-bottom: 15px; }
+
+.padding-left {
+  padding-left: 15px; }
+
+.padding-right {
+  padding-right: 15px; }
+
+.padding-top {
+  padding-top: 15px; }
+
+.padding-bottom {
+  padding-bottom: 15px; }
+
+.dark, .dark * {
+  color: #fff !important; }
+
+.strong {
+  font-weight: 600; }
+
+.fade.active {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1; }
