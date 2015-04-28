@@ -14,16 +14,16 @@
 //foundation icons
 @import "foundation-icons";
 
-//breakpoints
+// These are defined in '_variables.scss'
+// but its easier to manage them here. When I find other useful settings
+// I plan on also moving those into this file
 
+//breakpoints
 $small-screen: 768px;
 $medium-screen: 1280px;
 $large-screen: 1440px;
 
-// These are defined in '_settings.scss'
-// but its easier to manage them here. When I find other useful settings
-// I plan on also moving those into this file
-
+//colors
 $primary-color: #008CBA;
 $secondary-color: #e7e7e7;
 $alert-color: #f04124;
@@ -31,7 +31,7 @@ $success-color: #43AC6A;
 $warning-color: #f08a24;
 $info-color: #a0d3e8;
 
-// Other Arbitrary Values
+// Other Arbitrary Values (custom)
 
 $spacing: 15px;
 $radius: 5px;
