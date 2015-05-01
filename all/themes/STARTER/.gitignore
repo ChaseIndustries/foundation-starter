@@ -24,4 +24,5 @@ bi-stage.*
 */settings*.php
 *.codekit
 gruntfile.js
+node_modules
 
