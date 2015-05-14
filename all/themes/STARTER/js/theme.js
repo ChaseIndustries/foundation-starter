@@ -102,7 +102,7 @@
           if($("body").hasClass("open")){
             toggleNav();
           }
-        }, 200, "");
+        }, 200, "global");
       });
     }
   };
