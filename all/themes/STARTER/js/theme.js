@@ -58,32 +58,7 @@
     }
     $(".nav-toggle, .off-canvas, body").toggleClass("open");
   }
-
-  /**
-   * Stuff to run immediately upon page load
-   */
-  svgToPng();
-
-  /**
-   * Stuff to run on resize.
-   */
-  $(window).resize(function() {
-    waitForFinalEvent(function() {
-      init();
-      // close the nav if it's open
-      if($("body").hasClass("open")){
-        toggleNav();
-      }
-    }, 200, "");
-  });
-
-  /**
-   * Stuff to run after page load is complete.
-   */
-  $(document).ready(function() {
-    // Place functions here
-  });
-
+  
   /**
    * Helper function to delay firing resize events until the user actually
    * stops resizing their browser.
@@ -104,14 +79,31 @@
   Drupal.behaviors.STARTER = {
     attach: function(context, settings) {
       
-      // Initialize foundation plugins
+      // Initialize plugins/page  
       $(document).foundation();
+      svgToPng();
       
-      // Event listenters
+      // Initialize page
+      init();
+      
+      /**
+       * Event listeners
+       */
+   
       $(".js__nav-toggle").on("click", function(e){
          e.stopPropagation();
          toggleNav();
        });
+
+      $(window).resize(function() {
+        waitForFinalEvent(function() {
+          init();
+          // close the nav if it's open
+          if($("body").hasClass("open")){
+            toggleNav();
+          }
+        }, 200, "");
+      });
     }
   };
   
