@@ -1,4 +1,10 @@
 <?php
+  
+/**
+ * Add a custom, theme-specific JS file. Added here so it can be placed in the
+ * footer instead of the header which is where the info file places JS.
+ */
+drupal_add_js(drupal_get_path('theme', 'STARTER') . '/js/theme.js', array('type' => 'file', 'scope' => 'footer'));
 
 /**
  * Implements template_preprocess_html().

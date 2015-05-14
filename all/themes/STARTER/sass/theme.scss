@@ -19,40 +19,60 @@
  * the following:
  * - https://drupal.org/node/1887922
  * - http://smacss.com/
+ * This project requires Bourbon to compile
+ * gem install bourbon
  */
  
-// Make sure the charset is set appropriately
-@charset "UTF-8";
+// Fonts
+// Put fonts here
+ 
+// Breakpoints
+
+$small-screen: 640px;
+$medium-screen: 1025px;
+$large-screen: 1440px;
+$extra-large-screen:1920px;
+
+// Shorthand breakpoints
+
+$break-sm: $small-screen;
+$break-md: $medium-screen;
+$break-lg: $large-screen;
+$break-xl: $extra-large-screen;
 
 // These are defined in '_foundation-variables.scss'
 // but its easier to manage them here. When I find other useful settings
 // I plan on also moving those into this file
 
-//breakpoints
-$small-screen: 768px;
-$medium-screen: 1280px;
-$large-screen: 1440px;
+$base:        #007dc5; //light blue
+$highlight-1: #30acb4; //teal
+$highlight-2: #7c223f; //maroon-ish
+$highlight-3: #df9727; //orange/yellow
+$dark-1:      #092759; //dark blue
+$gray-lt:     #ececec;
+$gray-md:     #808080;
 
-//colors
-$primary-color: #008CBA;
-$secondary-color: #e7e7e7;
 $alert-color: #f04124;
-$success-color: #43AC6A;
+$success-color: $highlight-1;
 $warning-color: #f08a24;
 $info-color: #a0d3e8;
 
-// Other Arbitrary Values (custom)
+// Other Arbitrary Values
+
 $spacing: 15px;
 $radius: 5px;
-$footer-height:180px;
-$header-height:180px;
+$footer-height:225px;
+$header-height:110px;
+
+// Make sure the charset is set appropriately
+@charset "UTF-8";
 
 // Foundation imports
-// Base
-//
 // Init file contains required imports. Here's where we include normalize,
-// foundation and also compass.
+// foundation and also bourbon.
 @import "base/init";
+// Comment out this import if you don't want to use normalize.
+@import "../../zurb_foundation/scss/normalize";
 // Import our mixins early so they can be used by other partials.
 @import "base/mixins";
 // Fix for some Drupal CSS quirks (Drupalisms).
@@ -61,7 +81,13 @@ $header-height:180px;
 //foundation icons
 @import "foundation-icons";
 
+//custom icons
+@import "../css/icons.fallback";
+@import "../css/icons.data.png";
+@import "../css/icons.data.svg";
+
 // Custom Theme Imports
+@import 'base';
 @import 'component';
 @import 'layout';
 @import 'modifiers';

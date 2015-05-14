@@ -28,40 +28,40 @@
 }
 
 //positioning helpers
-@mixin absolute-center($width, $height){
+@mixin absolute-center($width : null, $height : null){
   position:absolute;
   left:50%;
   top:50%;
   @if $width and $height {
     margin-left:-.5 * $width;
   } @else if not $height {
-    @include translateX(-50%);
+    @include transform(translateX(-50%));
   }
-  @if $height and not $width {
+  @if $width and $height {
     margin-top:-.5 * $height;
   } @else if not $width {
-    @include translateY(-50%);
+    @include transform(translateY(-50%));
   }
-  @if $height and $width {
+  @if $height == null and $width == null {
     @include translate3d(-50%, -50%, 0);
   }
 }
-@mixin absolute-x($width){
+@mixin absolute-x($width : null){
   position:absolute;
   left:50%;
   @if $width {
     margin-left:-.5 * $width;
   } @else {
-    @include translateX(-50%);
+    @include transform(translateX(-50%));
   }
 }
-@mixin absolute-y($height){
+@mixin absolute-y($height : null){
   position:absolute;
   top:50%;
   @if $height {
     margin-top:-.5 * $height
   } @else {
-    @include translateY(-50%);
+    @include transform(translateY(-50%));
   }
 }
 @mixin center() {

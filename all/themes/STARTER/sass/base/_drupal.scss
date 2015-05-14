@@ -5,6 +5,18 @@
   top: emCalc(29px);
 }
 
+#admin-menu {
+  * {
+    font-size:95%;
+    }
+    .admin-menu-search {
+      height:auto;
+      input {
+        border-radius:0;
+      }
+    }
+}
+
 // Remove the bottom padding on status messages when displayed inside a Zurb
 // Foundation Reveal modal.
 #status-messages.reveal-modal {
@@ -33,4 +45,21 @@
 // Allow drupal inline elements to mixin Foundation inline properties
 .inline {
   @include inline-list;
+}
+
+.item-list ul li {
+  margin-left:0;
+}
+
+//
+// field collection overrides
+//
+.field-collection-container {
+  margin:0;
+  border:none;
+  .field-collection-view {
+    padding:0;
+    border:none;
+    margin:0;
+  }
 }

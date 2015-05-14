@@ -54,8 +54,7 @@ scripts[] = js/vendor/shims/respond.min.js
 scripts[] = js/vendor/foundation.min.js
 
 ; Theme scripts.
-; This file is empty, just uncomment this line and start editing!
-scripts[] = js/theme.js
+; SEE TEMPLATE.PHP (inserted in footer)
 
 ; This section lists the regions defined in the page.tpl.php. The name in
 ; brackets is the machine name of the region. The text after the equals sign is
@@ -83,6 +82,7 @@ regions[footer_secondcolumn] = Footer two
 regions[footer_thirdcolumn]  = Footer three
 regions[footer_fourthcolumn] = Footer four
 regions[footer]              = Footer
+regions[off_canvas]          = Off Canvas
 
 ; Panel Layouts
 plugins[panels][layouts] = layouts

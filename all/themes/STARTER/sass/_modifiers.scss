@@ -40,19 +40,19 @@ img.pull-left {
 }
 
 .highlight-1 {
-  color:$primary-color;
+  color:$highlight-1;
 }
 
 .bgc-highlight-1 {
-  background:$primary-color;
+  background:$highlight-1;
 }
 
 .highlight-2 {
-  color:$secondary-color;;
+  color:highlight-2;
 }
 
 .bgc-highlight-2 {
-  background:$secondary-color;
+  background:highlight-2;
 }
 
 .no-margin-top {
@@ -99,6 +99,14 @@ img.pull-left {
   padding-bottom:$spacing;
 }
 
+.large-margin-top {
+  margin-top:$spacing * 2;
+}
+
+.large-margin-bottom {
+  margin-bottom:$spacing * 2;
+}
+
 .dark {
   &,* {
     color:#fff !important;
@@ -110,5 +118,5 @@ img.pull-left {
 }
 
 .fade.active {
-  @include opacity(1);
+  opacity:1;
 }
