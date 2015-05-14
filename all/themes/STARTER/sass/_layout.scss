@@ -2,3 +2,16 @@
  * @file layout.scss
  *   Divides the page into sections. Layouts hold one or more modules together.
  */
+ 
+html, 
+body {
+  height: 100%;
+}
+ 
+.page {
+  min-height:100%;
+}
+ 
+.page-header {
+  height:$header-height; 
+}

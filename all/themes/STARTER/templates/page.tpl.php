@@ -30,35 +30,35 @@
   <?php endif; ?>
   <?php if (!empty($page['featured'])): ?>
     <!--/.featured -->
-    <section class="l-featured row">
+    <section class="page-featured row">
       <div class="large-12 columns">
         <?php print render($page['featured']); ?>
       </div>
     </section>
-    <!--/.l-featured -->
+    <!--/.page-featured -->
   <?php endif; ?>
 
   <?php if ($messages && !$zurb_foundation_messages_modal): ?>
-    <!--/.l-messages -->
-    <section class="l-messages row">
+    <!--/.page-messages -->
+    <section class="page-messages row">
       <div class="large-12 columns">
         <?php if ($messages): print $messages; endif; ?>
       </div>
     </section>
-    <!--/.l-messages -->
+    <!--/.page-messages -->
   <?php endif; ?>
 
   <?php if (!empty($page['help'])): ?>
-    <!--/.l-help -->
-    <section class="l-help row">
+    <!--/.page-help -->
+    <section class="page-help row">
       <div class="large-12 columns">
         <?php print render($page['help']); ?>
       </div>
     </section>
-    <!--/.l-help -->
+    <!--/.page-help -->
   <?php endif; ?>
 
-  <main role="main" class="row l-main">
+  <main role="main" class="row page-content">
     <div class="<?php print $main_grid; ?> main columns">
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlight panel callout">
@@ -103,53 +103,9 @@
       </aside>
     <?php endif; ?>
   </main>
-  <!--/.main-->
-
-  <?php if (!empty($page['triptych_first']) || !empty($page['triptych_middle']) || !empty($page['triptych_last'])): ?>
-    <!--.triptych-->
-    <section class="l-triptych row">
-      <div class="triptych-first large-4 columns">
-        <?php print render($page['triptych_first']); ?>
-      </div>
-      <div class="triptych-middle large-4 columns">
-        <?php print render($page['triptych_middle']); ?>
-      </div>
-      <div class="triptych-last large-4 columns">
-        <?php print render($page['triptych_last']); ?>
-      </div>
-    </section>
-    <!--/.triptych -->
-  <?php endif; ?>
-
-  <?php if (!empty($page['footer_firstcolumn']) || !empty($page['footer_secondcolumn']) || !empty($page['footer_thirdcolumn']) || !empty($page['footer_fourthcolumn'])): ?>
-    <!--.footer-columns -->
-    <section class="row l-footer-columns">
-      <?php if (!empty($page['footer_firstcolumn'])): ?>
-        <div class="footer-first large-3 columns">
-          <?php print render($page['footer_firstcolumn']); ?>
-        </div>
-      <?php endif; ?>
-      <?php if (!empty($page['footer_secondcolumn'])): ?>
-        <div class="footer-second large-3 columns">
-          <?php print render($page['footer_secondcolumn']); ?>
-        </div>
-      <?php endif; ?>
-      <?php if (!empty($page['footer_thirdcolumn'])): ?>
-        <div class="footer-third large-3 columns">
-          <?php print render($page['footer_thirdcolumn']); ?>
-        </div>
-      <?php endif; ?>
-      <?php if (!empty($page['footer_fourthcolumn'])): ?>
-        <div class="footer-fourth large-3 columns">
-          <?php print render($page['footer_fourthcolumn']); ?>
-        </div>
-      <?php endif; ?>
-    </section>
-    <!--/.footer-columns-->
-  <?php endif; ?>
-
-  <!--.l-footer-->
-  <footer class="l-footer panel row" role="contentinfo">
+  <!--/.page-content-->
+  <!--.page-footer-->
+  <footer class="page-footer panel row" role="contentinfo">
     <?php if (!empty($page['footer'])): ?>
       <div class="footer large-12 columns">
         <?php print render($page['footer']); ?>

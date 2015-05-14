@@ -12,11 +12,28 @@
   docWidth,
   docHeight;
   
+  
+  /**
+   * Page initialization
+   * Called on resize, page load, or to reset the page
+   */ 
+  function init(){
+    setVars();
+    setPositions();
+  }
+  
   function setVars(){ 
     docHeight = $(document).outerHeight(),
     docWidth  = $(document).outerWidth(),
     winHeight = $(window).height(),
     winWidth  = $(window).width();
+  }
+  
+  /**
+   * Sets any positioning on the page
+   */
+  function setPositions(){
+    // Place positioning code here
   }
 
   /**
@@ -32,22 +49,32 @@
     });
   }
 
+  
+  function toggleNav(){
+    if($(".off-canvas").hasClass("open")){
+      
+    } else {
+      
+    }
+    $(".nav-toggle, .off-canvas, body").toggleClass("open");
+  }
+
   /**
    * Stuff to run immediately upon page load
    */
   svgToPng();
-
-  // initialize foundation plugins
-  $(document).foundation();
 
   /**
    * Stuff to run on resize.
    */
   $(window).resize(function() {
     waitForFinalEvent(function() {
-      var width = $(window).width();
-      // Place functions here
-    }, 500, "");
+      init();
+      // close the nav if it's open
+      if($("body").hasClass("open")){
+        toggleNav();
+      }
+    }, 200, "");
   });
 
   /**
@@ -76,7 +103,15 @@
   
   Drupal.behaviors.STARTER = {
     attach: function(context, settings) {
-      // Get your Yeti started.
+      
+      // Initialize foundation plugins
+      $(document).foundation();
+      
+      // Event listenters
+      $(".js__nav-toggle").on("click", function(e){
+         e.stopPropagation();
+         toggleNav();
+       });
     }
   };
   
