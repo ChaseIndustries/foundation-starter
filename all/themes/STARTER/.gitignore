@@ -23,6 +23,5 @@ bi-stage.*
 # Settings files
 */settings*.php
 *.codekit
-gruntfile.js
 node_modules
 
