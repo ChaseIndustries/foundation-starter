@@ -70,19 +70,29 @@ module.exports = function(grunt) {
         args: ['cc', 'all']
       }
     },
-    grunticon: {
+    webfont: {
       icons : {
-        files: [{
-            expand: true,
-            cwd: 'images/icons/source',
-            src: ['*.svg', '*.png'],
-            dest: 'css'
-        }],
-        options: {
-          datasvgcss : 'icons.data.svg.scss',
-          datapngcss : 'icons.data.png.scss',
-          urlpngcss  : 'icons.fallback.scss',
-          enhanceSVG : true
+        src: 'images/icons/*.svg',
+        dest: 'fonts/custom-icons',
+        destCss : 'sass',
+        options : {
+          stylesheet : 'scss',
+          relativeFontPath : '../fonts/custom-icons',
+          htmlDemo : 'false'
+        }
+      }
+    },
+    notify : {
+      sass : {
+        options : {
+          title : "CSS Compiled",
+          message : "SASS Task Complete"
+        }
+      },
+      drush : { 
+        options : {
+          title : "Cache Cleared",
+          message : "Cleared the Drupal cache"
         }
       }
     },
@@ -105,26 +115,12 @@ module.exports = function(grunt) {
       },
       svg : {
         files : ['images/icons/source/*.svg'],
-        tasks : ['grunticon','sass']
-      }
-    },
-    notify : {
-      sass : {
-        options : {
-          title : "CSS Compiled",
-          message : "SASS Task Complete"
-        }
-      },
-      drush : { 
-        options : {
-          title : "Cache Cleared",
-          message : "Cleared the Drupal cache"
-        }
+        tasks : ['webfont','sass']
       }
     }
   });
   grunt.registerTask('build', ['sass', 'notify', 'grunticon']);
   grunt.registerTask('default', ['build', 'watch']);
   grunt.loadNpmTasks('grunt-notify');
-  grunt.loadNpmTasks('grunt-grunticon');
+  grunt.loadNpmTasks('grunt-webfont');
 };

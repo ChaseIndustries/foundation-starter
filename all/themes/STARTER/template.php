@@ -6,6 +6,38 @@
  */
 drupal_add_js(drupal_get_path('theme', 'STARTER') . '/js/theme.js', array('type' => 'file', 'scope' => 'footer'));
 
+
+/**
+ * Implements theme_menu_link().
+ *
+ * For mobile navigation, adds an 'overview' link on items with submenus that also have landing pages
+ * This is better for mobile UX as it allows users to skip landing pages all together or
+ * view them if they so choose.
+ */
+function STARTER_menu_link(&$variables){
+  $element = $variables['element'];
+  $theme = $element["#theme"];
+  $sub_menu = '';
+  if(count($element["#below"]) && is_array($element["#below"]) && $element["#href"] != "<nolink>" && $element['#title'] != 'Overview'){
+    if(in_array("menu_link__menu_block__3", $theme)){ //target the off-canvas menu, change to your off canvas menu id
+      $sub = $element["#below"];
+      $arr = array_values($sub);
+      $o = array_shift($arr);
+      $o["#title"] = "Overview";
+      $o["#href"] = $element["#href"];
+      array_unshift($element["#below"],$o);
+      $element["#href"] = "<nolink>";
+    }
+  }
+  //bug fix because I'm too lazy to see what's actually causing 'overview' links to have sub menus
+  if($element['#title'] == 'Overview' && count($element['#below'])){
+    $element['#below'] = array();
+    $element['#attributes']['class'][] = 'leaf';
+  }
+  $sub_menu = drupal_render($element['#below']);
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}
 /**
  * Implements template_preprocess_html().
  *

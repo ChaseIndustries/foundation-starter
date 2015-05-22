@@ -27,7 +27,7 @@
     transform: rotate(0deg);
     transition: .4s ease-in-out;
     @include absolute-x();
-    @include transform-origin(0 0);
+    @include transform-origin(0 1px);
     &:nth-child(1){
       top:9px;
     }

@@ -51,11 +51,6 @@
 
   
   function toggleNav(){
-    if($(".off-canvas").hasClass("open")){
-      
-    } else {
-      
-    }
     $(".nav-toggle, .off-canvas, body").toggleClass("open");
   }
   
