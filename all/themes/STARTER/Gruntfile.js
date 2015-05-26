@@ -63,6 +63,9 @@ module.exports = function(grunt) {
       cc_theme_registry: {
         args: ['cc', 'theme-registry']
       },
+      cc_registry: {
+        args: ['cc', 'registry']
+      },
       cc_css_js: {
         args: ['cc', 'css-js']
       },
@@ -100,18 +103,18 @@ module.exports = function(grunt) {
       grunt: { files: ['Gruntfile.js'] },
       sass: {
         files: ['<%= global_vars.theme_scss %>/*.scss','<%= global_vars.theme_scss %>/*/*.scss'],
-        tasks: ['sass', 'notify:sass'],
+        tasks: ['sass', 'notify:sass', 'drush:cc_css_js', 'notify:drush'],
         options: {
           livereload: true
         }
       },
       templates: {
-        files: ['**/*.tpl.php'],
+        files: ['**/*.tpl.php', '**/*.info', 'template.php'],
         tasks: ['drush:cc_theme_registry', 'notify:drush']
       },
       info :{
         files: ['**/*.info', 'template.php'],
-        tasks: ['drush:cc_all', 'notify:drush']
+        tasks: ['drush:cc_registry', 'notify:drush']
       },
       svg : {
         files : ['images/icons/source/*.svg'],
