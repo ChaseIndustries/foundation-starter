@@ -108,6 +108,10 @@ module.exports = function(grunt) {
           livereload: true
         }
       },
+      js : {
+        files : ['js/*.js'],
+        tasks : ['drush:cc_css_js', 'notify:drush'] 
+      },
       templates: {
         files: ['**/*.tpl.php', '**/*.info', 'template.php'],
         tasks: ['drush:cc_theme_registry', 'notify:drush']

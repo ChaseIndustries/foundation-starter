@@ -72,7 +72,7 @@ $header-height:110px;
 // foundation and also bourbon.
 @import "base/init";
 // Comment out this import if you don't want to use normalize.
-@import "../../zurb_foundation/scss/normalize";
+@import "base/normalize";
 // Import our mixins early so they can be used by other partials.
 @import "base/mixins";
 // Fix for some Drupal CSS quirks (Drupalisms).
