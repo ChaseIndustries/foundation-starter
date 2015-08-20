@@ -52,17 +52,29 @@ $dark-1:      #092759; //dark blue
 $gray-lt:     #ececec;
 $gray-md:     #808080;
 
-$alert-color: #f04124;
-$success-color: $highlight-1;
-$warning-color: #f08a24;
-$info-color: #a0d3e8;
+
+// Foundation colors
+$primary-color: $base;
+$secondary-color: $highlight-1;
+$alert-color: $highlight-1;
+$success-color: $base;
+$warning-color: $highlight-1;
+$info-color: $highlight-2;
 
 // Other Arbitrary Values
 
-$spacing: 15px;
-$radius: 5px;
-$footer-height:225px;
-$header-height:110px;
+$spacing: 1.5rem;
+$radius: .5rem;
+$footer-height:22.5rem;
+$header-height:11rem;
+
+
+// This allows 1 rem = 10px for easy translation from rem to px.  e.g. 5.3rem = 53px
+$base-font-size: 10px;
+$rem-base: $base-font-size;
+
+// Adjust row width so it's wider than 1000px (the default)
+$row-width: rem-calc(1400);
 
 // Make sure the charset is set appropriately
 @charset "UTF-8";

@@ -23,16 +23,41 @@
           </div>
         </div>
       </section>
+      <?php if ($top_bar): ?>
+      <!--.top-bar -->
+      <?php if ($top_bar_classes): ?>
+        <div class="<?php print $top_bar_classes; ?>">
+      <?php endif; ?>
+      <nav class="top-bar" data-topbar <?php print $top_bar_options; ?>>
+        <ul class="title-area">
+          <li class="name"><h1><?php print $linked_site_name; ?></h1></li>
+          <li class="toggle-topbar menu-icon">
+            <a href="#"><span><?php print $top_bar_menu_text; ?></span></a></li>
+        </ul>
+        <section class="top-bar-section">
+          <?php if ($top_bar_main_menu) : ?>
+            <?php print $top_bar_main_menu; ?>
+          <?php endif; ?>
+          <?php if ($top_bar_secondary_menu) : ?>
+            <?php print $top_bar_secondary_menu; ?>
+          <?php endif; ?>
+        </section>
+      </nav>
+      <?php if ($top_bar_classes): ?>
+        </div>
+      <?php endif; ?>
+      <!--/.top-bar -->
+    <?php endif; ?>
   </header>  <?php if (!empty($page['off_canvas'])): ?>
   <div class="off-canvas">
     <?php print render($page['off_canvas']); ?>
   </div>
   <?php endif; ?>
-  <?php if (!empty($page['featured'])): ?>
+  <?php if (!empty($page['full_bleed'])): ?>
     <!--/.featured -->
-    <section class="page-featured row">
+    <section class="page-full-bleed row">
       <div class="large-12 columns">
-        <?php print render($page['featured']); ?>
+        <?php print render($page['full_bleed']); ?>
       </div>
     </section>
     <!--/.page-featured -->
@@ -48,24 +73,8 @@
     <!--/.page-messages -->
   <?php endif; ?>
 
-  <?php if (!empty($page['help'])): ?>
-    <!--/.page-help -->
-    <section class="page-help row">
-      <div class="large-12 columns">
-        <?php print render($page['help']); ?>
-      </div>
-    </section>
-    <!--/.page-help -->
-  <?php endif; ?>
-
   <main role="main" class="row page-content">
     <div class="<?php print $main_grid; ?> main columns">
-      <?php if (!empty($page['highlighted'])): ?>
-        <div class="highlight panel callout">
-          <?php print render($page['highlighted']); ?>
-        </div>
-      <?php endif; ?>
-
       <a id="main-content"></a>
 
       <?php if ($breadcrumb): print $breadcrumb; endif; ?>
