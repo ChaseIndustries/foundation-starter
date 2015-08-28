@@ -38,6 +38,15 @@ function STARTER_menu_link(&$variables){
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
+
+/**
+ * Implements template_preprocess_field().
+ *
+ */
+//function STARTER_preprocess_field(&$variables) {
+// 
+//}
+
 /**
  * Implements template_preprocess_html().
  *
